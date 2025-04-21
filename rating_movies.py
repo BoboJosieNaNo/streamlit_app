@@ -12,7 +12,7 @@ movie_summary = st.text_area("Movie Summary", height=200) #this allows a larger 
 
 if movie_summary:
     response = openai.chat.completions.create(
-        model="ft:gpt-4o-mini-2024-07-18:personal:movie-rater:BN52o3mh", #change model to my own in openai playground
+        model="gpt-4o-mini", #change model to my own in openai playground
         messages=[
             {"role": "system", "content": "You are a helpful assistant that predicts IMDb ratings based on plot synopsis of a movie."},
             {"role": "user", "content": f"Here is the plot synopsis: {movie_summary}\nRating:"}
