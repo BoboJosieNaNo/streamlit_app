@@ -8,7 +8,7 @@ st.title("🎬 Movie Rating Predictor")
 st.write("Enter a movie summary and get a predicted IMDb rating.")
 
 # Text input from user
-movie_summary = st.text_area("Movie Summary", height=200)
+movie_summary = st.text_area("Movie Summary", height=200) #this allows a larger area for a text box
 
 if movie_summary:
     response = openai.chat.completions.create(
